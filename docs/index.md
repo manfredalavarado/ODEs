@@ -6,6 +6,4 @@ Esta pagina contiene el proyecto de documentación 'ODEs' planteado para la Tare
 Hecho por Manfred Alvarado López C10318
 
 1. [Tutorials](tutorials.md)
-2. [Guía de Uso](how-to-guides.md)
-3. [Reference](reference.md)
-4. [Explanation](explanation) 
+2. [Reference](reference.md)
