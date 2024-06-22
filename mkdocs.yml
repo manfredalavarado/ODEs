@@ -1,0 +1,15 @@
+# mkdocs.yml
+site_name: ODEs Docs
+
+theme:
+  name: "readthedocs"
+
+
+plugins:
+  - mkdocstrings
+
+
+nav:
+  - Indice: index.md
+  - Referencias: reference.md
+
