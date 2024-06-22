@@ -1,8 +1,8 @@
 # ODE/ODEs.py
 
-def Euler(f,xi,ti,tf,N):
+def Euler(f,x0,t0,tf,N):
     
-    t = np.linspace(ti,tf,N)
+    t = np.linspace(t0,tf,N)
     x = np.zeros(t.size)
     x[0] = xi
     h = t[1] - t[0]
@@ -13,9 +13,9 @@ def Euler(f,xi,ti,tf,N):
     return t,x
 
 
-def RK2(f,xi,ti,tf,N):
+def RK2(f,t0,t0,tf,N):
     
-    t = np.linspace(ti,tf,N)
+    t = np.linspace(t0,tf,N)
     x = np.zeros(t.size)
     x[0] = xi
     h = t[1] - t[0]
@@ -29,14 +29,14 @@ def RK2(f,xi,ti,tf,N):
     return x,t
 
 
-def RK4(f,xi,ti,tf,N):
+def RK4(f,x0,t0,tf,N):
 
-    t = np.linspace(ti,tf,N)
+    t = np.linspace(t0,tf,N)
     x = np.zeros(t.size)
     x[0] = xi
     h = t[1] - t[0]
     
-    for i in range(t.size-1):
+    for i in range(t.size - 1):
         k1 = h*f(x[i],t[i])
         k2 = h*f(x[i] + (k1/2), t[i] + (h/2))
         k3 = h*f(x[i] + (k2/2), t[i] + (h/2))
