@@ -35,7 +35,7 @@ def Euler(f,x0,t0,tf,N):
     return t,x
 
 
-def RK2(f,t0,t0,tf,N):
+def RK2(f,x0,t0,tf,N):
 
     """
     Método de rakuta de dos índices para resolver ODE.
