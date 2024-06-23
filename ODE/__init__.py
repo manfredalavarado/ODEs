@@ -1,3 +1,4 @@
+# ODE/__init__.py
 """
 Resuelve tus ecuaciones diferenciales ordinarias mediante el uso de este paqueteel cual incluye:
     - 'euler' : contiene el metodo de euler para resolucion de ODEs.
