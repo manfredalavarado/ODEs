@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#reference" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -175,6 +180,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Referencias
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -185,6 +203,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ODE.ode" class="md-nav__link">
+    <span class="md-ellipsis">
+      ode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ODE.ode.Euler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Euler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ODE.ode.RK2" class="md-nav__link">
+    <span class="md-ellipsis">
+      RK2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ODE.ode.RK4" class="md-nav__link">
+    <span class="md-ellipsis">
+      RK4
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -207,6 +280,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ODE.ode" class="md-nav__link">
+    <span class="md-ellipsis">
+      ode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ODE.ode.Euler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Euler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ODE.ode.RK2" class="md-nav__link">
+    <span class="md-ellipsis">
+      RK2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ODE.ode.RK4" class="md-nav__link">
+    <span class="md-ellipsis">
+      RK4
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -221,9 +340,526 @@
                   
 
 
-  <h1>Referencias</h1>
+<h1 id="reference">Reference</h1>
+<p>Este apartado contiene la información relevante para el uso de los métodos Euler, RK2 y RK4. Tanto sus argumentos, como los tipos y las variables de retorno.</p>
 
 
+<div class="doc doc-object doc-module">
+
+
+
+<a id="ODE.ode"></a>
+    <div class="doc doc-contents first">
+
+      <p>Contiene multiples formas de resolver ecuaciones diferenciales oridnarias.</p>
+<p>Este modulo permite al usuario resolver sus ODEs mediante los metodos de Euler, RK2 y RK4.</p>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ODE.ode.Euler" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">Euler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Metodo de Euler para resolver ODE.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>f</code></td>
+            <td>
+                  <code>function</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Ecuación a resolver.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>x0</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Valor inicial para la variable dependiente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>t0</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Valor inicial para la variable independiente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>tf</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Valor final para la variable independiente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>N</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Número de particiones del rango de la variable independiente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+      <p>Return:
+    Los vectores 'x' y 't', para las variables dependientes y para las variables independientes.</p>
+
+            <details class="quote">
+              <summary>Source code in <code>ODE/ode.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">Euler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Metodo de Euler para resolver ODE.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        f (function): Ecuación a resolver.</span>
+<span class="sd">        x0 (int): Valor inicial para la variable dependiente.</span>
+<span class="sd">        t0 (int): Valor inicial para la variable independiente.</span>
+<span class="sd">        tf (int): Valor final para la variable independiente.</span>
+<span class="sd">        N (int): Número de particiones del rango de la variable independiente.</span>
+
+<span class="sd">     Return:</span>
+<span class="sd">        Los vectores &#39;x&#39; y &#39;t&#39;, para las variables dependientes y para las variables independientes.</span>
+
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">xi</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">t</span><span class="p">,</span><span class="n">x</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ODE.ode.RK2" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">RK2</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Método de rakuta de dos índices para resolver ODE.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>f</code></td>
+            <td>
+                  <code>function</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Ecuación a resolver.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>x0</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Valor inicial de la variable dependiente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>t0</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Valor inicial de la variable independiente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>tf</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>valor final de la variable independiente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>N</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Número de particiones del rango de la variable independiente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="return" open>
+  <summary>return</summary>
+  <p>Los vectores 'x' y 't', para las variables independientes y para las variables dependientes.</p>
+</details>
+            <details class="quote">
+              <summary>Source code in <code>ODE/ode.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">RK2</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Método de rakuta de dos índices para resolver ODE.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        f (function): Ecuación a resolver.</span>
+<span class="sd">        x0 (int): Valor inicial de la variable dependiente.</span>
+<span class="sd">        t0 (int): Valor inicial de la variable independiente.</span>
+<span class="sd">        tf (int): valor final de la variable independiente.</span>
+<span class="sd">        N (int): Número de particiones del rango de la variable independiente.</span>
+
+<span class="sd">    return:</span>
+<span class="sd">       Los vectores &#39;x&#39; y &#39;t&#39;, para las variables independientes y para las variables dependientes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">xi</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">k1</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">k2</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">k1</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">t</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="ODE.ode.RK4" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">RK4</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+      <p>Método de Rakuta con cuatro índices para resolver ODE.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>f</code></td>
+            <td>
+                  <code>func</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Ecuación a resolver.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>x0</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Valor inicial para la variable dependiente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>t0</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Valor inicial para la variable independiente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>tf</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Valor final para la variable independiente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>N</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Número de particiones del rango de la variable independiente.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="return" open>
+  <summary>return</summary>
+  <p>Los vectores 'x' y 'n', para las variables dependientes e independientes.</p>
+</details>
+            <details class="quote">
+              <summary>Source code in <code>ODE/ode.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">RK4</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Método de Rakuta con cuatro índices para resolver ODE.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        f (func): Ecuación a resolver.</span>
+<span class="sd">        x0 (int): Valor inicial para la variable dependiente.</span>
+<span class="sd">        t0 (int): Valor inicial para la variable independiente.</span>
+<span class="sd">        tf (int): Valor final para la variable independiente.</span>
+<span class="sd">        N (int): Número de particiones del rango de la variable independiente.</span>
+
+<span class="sd">    return:</span>
+<span class="sd">        Los vectores &#39;x&#39; y &#39;n&#39;, para las variables dependientes e independientes.</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">xi</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">k1</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">k2</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">k1</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">k3</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">k2</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">k4</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">k3</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k3</span> <span class="o">+</span> <span class="n">k4</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">t</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
 
 
 
