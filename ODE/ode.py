@@ -1,4 +1,4 @@
-# ODE/ODEs.py
+# ODE/ode.py
 
 """
 Contiene multiples formas de resolver ecuaciones diferenciales oridnarias.
