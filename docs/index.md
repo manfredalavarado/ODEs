@@ -27,7 +27,7 @@ $$
 \\ x(t + h) = x(t) + hf(x,t)
 $$
 
-Cabe destacar que el valor de $$ \\epsilon $$ de la expansión de Taylor se relaciona al error. Este está relacionado de manera directa con la cantidad de subdivisiones que se hagan del intervalo de las variables independientes. El calculo de esta subdivisiones se relaciona a la expresión $$ \\ N = \frac{(b - a)}{h} $$ por lo que entre más subdivisiones, el error será más despreciable.
+Cabe destacar que el valor de $ \\epsilon $ de la expansión de Taylor se relaciona al error. Este está relacionado de manera directa con la cantidad de subdivisiones que se hagan del intervalo de las variables independientes. El calculo de esta subdivisiones se relaciona a la expresión $$ \\ N = \frac{(b - a)}{h} $$ por lo que entre más subdivisiones, el error será más despreciable.
 
 
 ## Método de Runge-Kutta de Segundo Orden (RK2)
