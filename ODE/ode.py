@@ -56,6 +56,9 @@ def RK2(f,x0,t0,tf,N):
         >>> print(x)
         >>> print(t)
      
+
+
+
      Args:
         f (function): Ecuación a resolver.
         x0 (int): Valor inicial de la variable dependiente.
