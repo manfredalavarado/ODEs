@@ -44,7 +44,7 @@ def Euler(f,x0,t0,tf,N):
 def RK2(f,x0,t0,tf,N):
 
     """
-    Método de rakuta de dos índices para resolver ODE.
+    Método de Runge-Kutta de Segundo Orden para resolver ODE.
 
     Examples:
         >>> import numpy as np
@@ -83,7 +83,7 @@ def RK2(f,x0,t0,tf,N):
 
 def RK4(f,x0,t0,tf,N):
     """
-    Método de Rakuta con cuatro índices para resolver ODE.
+    Método de Runge-Kutta de Cuarto Orden para resolver ODE.
 
     Examples:
         >>> import numpy as np
@@ -91,18 +91,7 @@ def RK4(f,x0,t0,tf,N):
         >>>     return -x**3 + np.sin(t)
         >>> x,t = RK4(f,0,0,10,20)
         >>> print(x)
-        [ 0.          0.          0.26439534  0.71189381  1.04830651  0.89488942
-  0.77464602  0.52141013  0.17502349 -0.28921312 -0.80263945 -0.97897518
- -0.73458315 -0.50879969 -0.16038526  0.30726691  0.81787725  0.97386719
-  0.72957635  0.49945695]
         >>> print(t)
-        [ 0.          0.52631579  1.05263158  1.57894737  2.10526316  2.63157895
-  3.15789474  3.68421053  4.21052632  4.73684211  5.26315789  5.78947368
-  6.31578947  6.84210526  7.36842105  7.89473684  8.42105263  8.94736842
-  9.47368421 10.        ]
-
-
-
 
     Args:
         f (func): Ecuación a resolver.
