@@ -823,7 +823,12 @@
 <span class="normal">124</span>
 <span class="normal">125</span>
 <span class="normal">126</span>
-<span class="normal">127</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">RK4</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">RK4</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Método de Rakuta con cuatro índices para resolver ODE.</span>
 
@@ -844,12 +849,17 @@
 <span class="sd">  9.47368421 10.        ]</span>
 
 
+
+
 <span class="sd">    Args:</span>
 <span class="sd">        f (func): Ecuación a resolver.</span>
 <span class="sd">        x0 (int): Valor inicial para la variable dependiente.</span>
 <span class="sd">        t0 (int): Valor inicial para la variable independiente.</span>
 <span class="sd">        tf (int): Valor final para la variable independiente.</span>
 <span class="sd">        N (int): Número de particiones del rango de la variable independiente.</span>
+
+
+
 
 <span class="sd">    return:</span>
 <span class="sd">        Los vectores &#39;x&#39; y &#39;n&#39;, para las variables dependientes e independientes.</span>
