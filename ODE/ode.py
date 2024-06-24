@@ -102,12 +102,17 @@ def RK4(f,x0,t0,tf,N):
   9.47368421 10.        ]
 
 
+
+
     Args:
         f (func): Ecuación a resolver.
         x0 (int): Valor inicial para la variable dependiente.
         t0 (int): Valor inicial para la variable independiente.
         tf (int): Valor final para la variable independiente.
         N (int): Número de particiones del rango de la variable independiente.
+
+
+
 
     return:
         Los vectores 'x' y 'n', para las variables dependientes e independientes.
