@@ -2,7 +2,7 @@
 
 Esta pagina contiene el proyecto de documentación de las funciones para resolver ODE: Euler, RK2 y RK4.
 
-##Table of Contents
+##Tabla de Contenidos
 
 1. [Guía de Uso](reference.md)
 
