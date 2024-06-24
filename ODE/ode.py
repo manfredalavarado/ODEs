@@ -12,6 +12,14 @@ def Euler(f,x0,t0,tf,N):
     """
     Metodo de Euler para resolver ODE.
 
+    Example:
+        >>> import numpy as np
+        >>> def f(x,t):
+        >>>     return -1*x**3 + np.sin(t)
+        >>> x,t = Euler(f,0,0,10,20)
+        >>> print(x)
+        >>> print(t)
+
     Args:
         f (function): Ecuación a resolver.
         x0 (int): Valor inicial para la variable dependiente.
@@ -26,13 +34,13 @@ def Euler(f,x0,t0,tf,N):
     """
     t = np.linspace(t0,tf,N)
     x = np.zeros(t.size)
-    x[0] = xi
+    x[0] = x0
     h = t[1] - t[0]
     
     for i in range(t.size - 1):
         x[i+1] = x[i] + h*f(x[i],t[i])
     
-    return t,x
+    return x,t
 
 
 def RK2(f,x0,t0,tf,N):
@@ -40,7 +48,15 @@ def RK2(f,x0,t0,tf,N):
     """
     Método de rakuta de dos índices para resolver ODE.
 
-    Args:
+    Example:
+        >>> import numpy as np
+        >>> def f(x,t):
+        >>>     return -1*x**3 + np.sin(t)
+        >>> x,t = RK2(f,0,0,10,20)
+        >>> print(x)
+        >>> print(t)
+
+     Args:
         f (function): Ecuación a resolver.
         x0 (int): Valor inicial de la variable dependiente.
         t0 (int): Valor inicial de la variable independiente.
@@ -53,7 +69,7 @@ def RK2(f,x0,t0,tf,N):
     
     t = np.linspace(t0,tf,N)
     x = np.zeros(t.size)
-    x[0] = xi
+    x[0] = x0
     h = t[1] - t[0]
     
     for i in range(t.size-1):
@@ -70,6 +86,15 @@ def RK4(f,x0,t0,tf,N):
     """
     Método de Rakuta con cuatro índices para resolver ODE.
 
+    Examples:
+        >>> import numpy as np
+        >>> def f(x,t):
+        >>>     return -1*x**3 - np.sin(t)
+        >>> x,t = RK4(f,0,0,10,20)
+        >>> print(x)
+        >>> print(t)
+                
+
     Args:
         f (func): Ecuación a resolver.
         x0 (int): Valor inicial para la variable dependiente.
@@ -82,7 +107,7 @@ def RK4(f,x0,t0,tf,N):
      """
     t = np.linspace(t0,tf,N)
     x = np.zeros(t.size)
-    x[0] = xi
+    x[0] = x0
     h = t[1] - t[0]
     
     for i in range(t.size - 1):
