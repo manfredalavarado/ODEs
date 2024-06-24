@@ -385,8 +385,6 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span><span class="n">t</span> <span class="o">=</span> <span class="n">Euler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -475,10 +473,38 @@
     </table>
 
 
-<details class="return" open>
-  <summary>Return</summary>
-  <p>Los vectores 'x' y 't', para las variables dependientes y para las variables independientes.</p>
-</details>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>x</code></td>            <td>
+                  <code>vector</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>resultados de la variable dependiente.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+<td><code>t</code></td>            <td>
+                  <code>vector</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>resultados de la variable independiente.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
             <details class="quote">
               <summary>Source code in <code>ODE/ode.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">11</span>
@@ -510,8 +536,7 @@
 <span class="normal">37</span>
 <span class="normal">38</span>
 <span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">Euler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">Euler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Metodo de Euler para resolver ODE.</span>
 
@@ -520,8 +545,6 @@
 <span class="sd">        &gt;&gt;&gt; def f(x,t):</span>
 <span class="sd">        &gt;&gt;&gt;     return (-1*x)**3 + np.sin(t)</span>
 <span class="sd">        &gt;&gt;&gt; x,t = Euler(f,0,0,10,20)</span>
-<span class="sd">        &gt;&gt;&gt; print(x)</span>
-<span class="sd">        &gt;&gt;&gt; print(t)</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        f (function): Ecuación a resolver.</span>
@@ -530,8 +553,9 @@
 <span class="sd">        tf (int): Valor final para la variable independiente.</span>
 <span class="sd">        N (int): Número de particiones del rango de la variable independiente.</span>
 
-<span class="sd">    Return:</span>
-<span class="sd">        Los vectores &#39;x&#39; y &#39;t&#39;, para las variables dependientes y para las variables independientes.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        x (vector): resultados de la variable dependiente.</span>
+<span class="sd">        t (vector): resultados de la variable independiente.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
@@ -657,13 +681,42 @@
     </table>
 
 
-<details class="return" open>
-  <summary>return</summary>
-  <p>Los vectores 'x' y 't', para las variables independientes y para las variables dependientes.</p>
-</details>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>x</code></td>            <td>
+                  <code>vector</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>resultados de la variable dependiente.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+<td><code>t</code></td>            <td>
+                  <code>vector</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>resultados de la variable independiente.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
             <details class="quote">
               <summary>Source code in <code>ODE/ode.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">44</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">43</span>
+<span class="normal">44</span>
 <span class="normal">45</span>
 <span class="normal">46</span>
 <span class="normal">47</span>
@@ -719,8 +772,9 @@
 <span class="sd">        tf (int): valor final de la variable independiente.</span>
 <span class="sd">        N (int): Número de particiones del rango de la variable independiente.</span>
 
-<span class="sd">    return:</span>
-<span class="sd">       Los vectores &#39;x&#39; y &#39;t&#39;, para las variables independientes y para las variables dependientes.</span>
+<span class="sd">    returns:</span>
+<span class="sd">        x (vector): resultados de la variable dependiente.</span>
+<span class="sd">        t (vector): resultados de la variable independiente.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -851,10 +905,38 @@
     </table>
 
 
-<details class="return" open>
-  <summary>return</summary>
-  <p>Los vectores 'x' y 'n', para las variables dependientes e independientes.</p>
-</details>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>x</code></td>            <td>
+                  <code>vector</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>resultados de la variable dependiente.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+<td><code>t</code></td>            <td>
+                  <code>vector</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>resultados de la variable independiente.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
             <details class="quote">
               <summary>Source code in <code>ODE/ode.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 84</span>
@@ -914,10 +996,10 @@
 <span class="sd">        N (int): Número de particiones del rango de la variable independiente.</span>
 
 
+<span class="sd">    returns:</span>
+<span class="sd">        x (vector): resultados de la variable dependiente.</span>
+<span class="sd">        t (vector): resultados de la variable independiente.</span>
 
-
-<span class="sd">    return:</span>
-<span class="sd">        Los vectores &#39;x&#39; y &#39;n&#39;, para las variables dependientes e independientes.</span>
 <span class="sd">     &quot;&quot;&quot;</span>
     <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>

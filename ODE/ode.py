@@ -50,8 +50,6 @@ def RK2(f,x0,t0,tf,N):
         >>> def f(x,t):
         >>>     return -x**3 + np.sin(t)
         >>> x,t = RK2(f,0,0,10,20)
-        >>> print(x)
-        >>> print(t)
 
     Args:
         f (function): Ecuación a resolver.
@@ -90,8 +88,6 @@ def RK4(f,x0,t0,tf,N):
         >>> def f(x,t):
         >>>     return -x**3 + np.sin(t)
         >>> x,t = RK4(f,0,0,10,20)
-        >>> print(x)
-        >>> print(t)
 
     Args:
         f (func): Ecuación a resolver.
