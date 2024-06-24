@@ -17,8 +17,6 @@ def Euler(f,x0,t0,tf,N):
         >>> def f(x,t):
         >>>     return (-1*x)**3 + np.sin(t)
         >>> x,t = Euler(f,0,0,10,20)
-        >>> print(x)
-        >>> print(t)
 
     Args:
         f (function): Ecuación a resolver.
@@ -27,8 +25,9 @@ def Euler(f,x0,t0,tf,N):
         tf (int): Valor final para la variable independiente.
         N (int): Número de particiones del rango de la variable independiente.
 
-    Return:
-        Los vectores 'x' y 't', para las variables dependientes y para las variables independientes.
+    Returns:
+        x (vector): resultados de la variable dependiente.
+        t (vector): resultados de la variable independiente.
     """
     t = np.linspace(t0,tf,N)
     x = np.zeros(t.size)
@@ -61,8 +60,9 @@ def RK2(f,x0,t0,tf,N):
         tf (int): valor final de la variable independiente.
         N (int): Número de particiones del rango de la variable independiente.
 
-    return:
-       Los vectores 'x' y 't', para las variables independientes y para las variables dependientes.
+    returns:
+        x (vector): resultados de la variable dependiente.
+        t (vector): resultados de la variable independiente.
 
     """
     
@@ -101,10 +101,10 @@ def RK4(f,x0,t0,tf,N):
         N (int): Número de particiones del rango de la variable independiente.
 
 
+    returns:
+        x (vector): resultados de la variable dependiente.
+        t (vector): resultados de la variable independiente.
 
-
-    return:
-        Los vectores 'x' y 'n', para las variables dependientes e independientes.
      """
     t = np.linspace(t0,tf,N)
     x = np.zeros(t.size)
