@@ -387,7 +387,7 @@
 <blockquote>
 <p>import numpy as np
 def f(x,t):
-    return -1<em>x</em>*3 + np.sin(t)
+    return (-1<em>x)</em>*3 + np.sin(t)
 x,t = Euler(f,0,0,10,20)
 print(x)
 print(t)</p>
@@ -523,7 +523,7 @@ print(t)</p>
 <span class="sd">    Example:</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        &gt;&gt;&gt; def f(x,t):</span>
-<span class="sd">        &gt;&gt;&gt;     return -1*x**3 + np.sin(t)</span>
+<span class="sd">        &gt;&gt;&gt;     return (-1*x)**3 + np.sin(t)</span>
 <span class="sd">        &gt;&gt;&gt; x,t = Euler(f,0,0,10,20)</span>
 <span class="sd">        &gt;&gt;&gt; print(x)</span>
 <span class="sd">        &gt;&gt;&gt; print(t)</span>
@@ -576,7 +576,7 @@ print(t)</p>
 <blockquote>
 <p>import numpy as np
 def f(x,t):
-    return -1<em>x</em>*3 + np.sin(t)
+    return (-1<em>x)</em>*3 + np.sin(t)
 x,t = RK2(f,0,0,10,20)
 print(x)
 print(t)</p>
@@ -640,7 +640,7 @@ print(t)</p>
 <span class="sd">    Example:</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        &gt;&gt;&gt; def f(x,t):</span>
-<span class="sd">        &gt;&gt;&gt;     return -1*x**3 + np.sin(t)</span>
+<span class="sd">        &gt;&gt;&gt;     return (-1*x)**3 + np.sin(t)</span>
 <span class="sd">        &gt;&gt;&gt; x,t = RK2(f,0,0,10,20)</span>
 <span class="sd">        &gt;&gt;&gt; print(x)</span>
 <span class="sd">        &gt;&gt;&gt; print(t)</span>
@@ -691,7 +691,7 @@ print(t)</p>
 <p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
-<span class="gp">&gt;&gt;&gt; </span>    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">,</span><span class="n">t</span> <span class="o">=</span> <span class="n">RK4</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
@@ -831,7 +831,7 @@ print(t)</p>
 <span class="sd">    Examples:</span>
 <span class="sd">        &gt;&gt;&gt; import numpy as np</span>
 <span class="sd">        &gt;&gt;&gt; def f(x,t):</span>
-<span class="sd">        &gt;&gt;&gt;     return -1*x**3 - np.sin(t)</span>
+<span class="sd">        &gt;&gt;&gt;     return (-1*x)**3 - np.sin(t)</span>
 <span class="sd">        &gt;&gt;&gt; x,t = RK4(f,0,0,10,20)</span>
 <span class="sd">        &gt;&gt;&gt; print(x)</span>
 <span class="sd">        &gt;&gt;&gt; print(t)</span>

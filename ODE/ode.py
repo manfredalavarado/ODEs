@@ -12,7 +12,7 @@ def Euler(f,x0,t0,tf,N):
     """
     Metodo de Euler para resolver ODE.
 
-    Example:
+    Examples:
         >>> import numpy as np
         >>> def f(x,t):
         >>>     return (-1*x)**3 + np.sin(t)
@@ -48,7 +48,7 @@ def RK2(f,x0,t0,tf,N):
     """
     Método de rakuta de dos índices para resolver ODE.
 
-    Example:
+    Examples:
         >>> import numpy as np
         >>> def f(x,t):
         >>>     return (-1*x)**3 + np.sin(t)
