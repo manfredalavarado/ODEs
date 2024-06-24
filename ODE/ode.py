@@ -27,7 +27,8 @@ def Euler(f,x0,t0,tf,N):
   3.15789474  3.68421053  4.21052632  4.73684211  5.26315789  5.78947368
   6.31578947  6.84210526  7.36842105  7.89473684  8.42105263  8.94736842
   9.47368421 10.        ]
-
+    """
+    """
     Args:
         f (function): Ecuación a resolver.
         x0 (int): Valor inicial para la variable dependiente.
@@ -71,7 +72,8 @@ def RK2(f,x0,t0,tf,N):
   3.15789474  3.68421053  4.21052632  4.73684211  5.26315789  5.78947368
   6.31578947  6.84210526  7.36842105  7.89473684  8.42105263  8.94736842
   9.47368421 10.        ]
-
+    """
+    """
      Args:
         f (function): Ecuación a resolver.
         x0 (int): Valor inicial de la variable dependiente.
@@ -118,7 +120,8 @@ def RK4(f,x0,t0,tf,N):
   6.31578947  6.84210526  7.36842105  7.89473684  8.42105263  8.94736842
   9.47368421 10.        ]
                 
-
+    """
+    """
     Args:
         f (func): Ecuación a resolver.
         x0 (int): Valor inicial para la variable dependiente.
