@@ -15,7 +15,7 @@ def Euler(f,x0,t0,tf,N):
     Example:
         >>> import numpy as np
         >>> def f(x,t):
-        >>>     return -1*x**3 + np.sin(t)
+        >>>     return (-1*x)**3 + np.sin(t)
         >>> x,t = Euler(f,0,0,10,20)
         >>> print(x)
         >>> print(t)
@@ -51,7 +51,7 @@ def RK2(f,x0,t0,tf,N):
     Example:
         >>> import numpy as np
         >>> def f(x,t):
-        >>>     return -1*x**3 + np.sin(t)
+        >>>     return (-1*x)**3 + np.sin(t)
         >>> x,t = RK2(f,0,0,10,20)
         >>> print(x)
         >>> print(t)
@@ -89,7 +89,7 @@ def RK4(f,x0,t0,tf,N):
     Examples:
         >>> import numpy as np
         >>> def f(x,t):
-        >>>     return -1*x**3 - np.sin(t)
+        >>>     return (-1*x)**3 - np.sin(t)
         >>> x,t = RK4(f,0,0,10,20)
         >>> print(x)
         >>> print(t)
