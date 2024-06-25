@@ -19,15 +19,15 @@ def Euler(f,x0,t0,tf,N):
         >>> x,t = Euler(f,0,0,10,20)
 
     Args:
-        f (function): Ecuación a resolver.
+        f (func): Función que iguala dx/dt.
         x0 (int): Valor inicial para la variable dependiente.
         t0 (int): Valor inicial para la variable independiente.
         tf (int): Valor final para la variable independiente.
         N (int): Número de particiones del rango de la variable independiente.
 
     Returns:
-        x (vector): resultados de la variable dependiente.
-        t (vector): resultados de la variable independiente.
+        x (array): resultados de la variable dependiente.
+        t (array): resultados de la variable independiente.
     """
     t = np.linspace(t0,tf,N)
     x = np.zeros(t.size)
@@ -52,15 +52,15 @@ def RK2(f,x0,t0,tf,N):
         >>> x,t = RK2(f,0,0,10,20)
 
     Args:
-        f (function): Ecuación a resolver.
+        f (func): Función que iguala a dx/dt.
         x0 (int): Valor inicial de la variable dependiente.
         t0 (int): Valor inicial de la variable independiente.
         tf (int): valor final de la variable independiente.
         N (int): Número de particiones del rango de la variable independiente.
 
     returns:
-        x (vector): resultados de la variable dependiente.
-        t (vector): resultados de la variable independiente.
+        x (array): resultados de la variable dependiente.
+        t (array): resultados de la variable independiente.
 
     """
     
@@ -90,7 +90,7 @@ def RK4(f,x0,t0,tf,N):
         >>> x,t = RK4(f,0,0,10,20)
 
     Args:
-        f (func): Ecuación a resolver.
+        f (func): Función que iguala dx/dt.
         x0 (int): Valor inicial para la variable dependiente.
         t0 (int): Valor inicial para la variable independiente.
         tf (int): Valor final para la variable independiente.
@@ -98,8 +98,8 @@ def RK4(f,x0,t0,tf,N):
 
 
     returns:
-        x (vector): resultados de la variable dependiente.
-        t (vector): resultados de la variable independiente.
+        x (array): resultados de la variable dependiente.
+        t (array): resultados de la variable independiente.
 
      """
     t = np.linspace(t0,tf,N)
