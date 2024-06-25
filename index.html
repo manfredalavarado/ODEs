@@ -249,6 +249,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#metodo-de-runge-kutta-de-cuarto-orden-rk4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método de Runge-Kutta de Cuarto Orden (RK4)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -355,6 +364,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#metodo-de-runge-kutta-de-cuarto-orden-rk4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método de Runge-Kutta de Cuarto Orden (RK4)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -427,6 +445,32 @@
 \]</div>
 <p>Cabe destacar que el valor de $ \epsilon $ de la expansión de Taylor se relaciona al error. Este está relacionado de manera directa con la cantidad de subdivisiones que se hagan del intervalo de las variables independientes. El calculo de esta subdivisiones se relaciona a la expresión $$ \ N = \frac{(b - a)}{h} $$ por lo que entre más subdivisiones, el error será más despreciable.</p>
 <h2 id="metodo-de-runge-kutta-de-segundo-orden-rk2">Método de Runge-Kutta de Segundo Orden (RK2)</h2>
+<p>En este método, se llega a una aproximación a la solución de la forma:</p>
+<div class="arithmatex">\[
+\\ x(t + h) = x(t) + hf[x(t + h/2), t + h/2] + O(h^3)
+\]</div>
+<p>El procedimiento usual para resolver una EDO por este método consiste en calcular los incrementos:</p>
+<div class="arithmatex">\[
+\\ k_1 = hf(x,t),  \quad \quad \quad k_2 = hf(x+\frac{k_1}{2}, t + \frac{h}{2})
+\]</div>
+<p>Para calcular la solución evaluada en un tiempo t + h con la siguiente ecuación:</p>
+<div class="arithmatex">\[
+\\ x(t+h) = x(t) + k_2
+\]</div>
+<p>Donde se obtiene un error global que escala con h al cuadrado.</p>
+<h2 id="metodo-de-runge-kutta-de-cuarto-orden-rk4">Método de Runge-Kutta de Cuarto Orden (RK4)</h2>
+<p>Si se busca una mayor precisión se puede utilizar el método RK4, el cual suele ser método predilecto para estos problemas.</p>
+<p>El procedimiento consiste, al igual que con RK2, en encontrar los incrementos, pero esta vez son 4:</p>
+<div class="arithmatex">\[
+\\ k_1 = hf(x, t), \quad \quad \quad k_2 = hf\left(x + \frac{k_1}{2}, t+\frac{h}2\right),
+\]</div>
+<div class="arithmatex">\[
+k_3 = hf\left(x + \frac{k_2}{2}, t+\frac{h}2\right), \quad \quad \quad k_4 = hf\left(x + k_3, t + h \right)
+\]</div>
+<p>Para finalmente calcular la solución evaluada en un tiempo t + h con la siguiente ecuación:</p>
+<div class="arithmatex">\[
+\\ x(t+h) = x(t) + \frac{1}{6}(k_1 + 2 k_2 + 2k_3 + k_4).
+\]</div>
 
 
 
