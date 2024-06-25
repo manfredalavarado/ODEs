@@ -402,11 +402,11 @@
           <tr class="doc-section-item">
             <td><code>f</code></td>
             <td>
-                  <code>function</code>
+                  <code>func</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Ecuación a resolver.</p>
+                <p>Función que iguala dx/dt.</p>
               </div>
             </td>
             <td>
@@ -484,7 +484,7 @@
       <tbody>
           <tr class="doc-section-item">
 <td><code>x</code></td>            <td>
-                  <code>vector</code>
+                  <code>array</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -494,7 +494,7 @@
           </tr>
           <tr class="doc-section-item">
 <td><code>t</code></td>            <td>
-                  <code>vector</code>
+                  <code>array</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -547,15 +547,15 @@
 <span class="sd">        &gt;&gt;&gt; x,t = Euler(f,0,0,10,20)</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        f (function): Ecuación a resolver.</span>
+<span class="sd">        f (func): Función que iguala dx/dt.</span>
 <span class="sd">        x0 (int): Valor inicial para la variable dependiente.</span>
 <span class="sd">        t0 (int): Valor inicial para la variable independiente.</span>
 <span class="sd">        tf (int): Valor final para la variable independiente.</span>
 <span class="sd">        N (int): Número de particiones del rango de la variable independiente.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        x (vector): resultados de la variable dependiente.</span>
-<span class="sd">        t (vector): resultados de la variable independiente.</span>
+<span class="sd">        x (array): resultados de la variable dependiente.</span>
+<span class="sd">        t (array): resultados de la variable independiente.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
@@ -608,11 +608,11 @@
           <tr class="doc-section-item">
             <td><code>f</code></td>
             <td>
-                  <code>function</code>
+                  <code>func</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Ecuación a resolver.</p>
+                <p>Función que iguala a dx/dt.</p>
               </div>
             </td>
             <td>
@@ -690,7 +690,7 @@
       <tbody>
           <tr class="doc-section-item">
 <td><code>x</code></td>            <td>
-                  <code>vector</code>
+                  <code>array</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -700,7 +700,7 @@
           </tr>
           <tr class="doc-section-item">
 <td><code>t</code></td>            <td>
-                  <code>vector</code>
+                  <code>array</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -760,15 +760,15 @@
 <span class="sd">        &gt;&gt;&gt; x,t = RK2(f,0,0,10,20)</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        f (function): Ecuación a resolver.</span>
+<span class="sd">        f (func): Función que iguala a dx/dt.</span>
 <span class="sd">        x0 (int): Valor inicial de la variable dependiente.</span>
 <span class="sd">        t0 (int): Valor inicial de la variable independiente.</span>
 <span class="sd">        tf (int): valor final de la variable independiente.</span>
 <span class="sd">        N (int): Número de particiones del rango de la variable independiente.</span>
 
 <span class="sd">    returns:</span>
-<span class="sd">        x (vector): resultados de la variable dependiente.</span>
-<span class="sd">        t (vector): resultados de la variable independiente.</span>
+<span class="sd">        x (array): resultados de la variable dependiente.</span>
+<span class="sd">        t (array): resultados de la variable independiente.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -830,7 +830,7 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Ecuación a resolver.</p>
+                <p>Función que iguala dx/dt.</p>
               </div>
             </td>
             <td>
@@ -908,7 +908,7 @@
       <tbody>
           <tr class="doc-section-item">
 <td><code>x</code></td>            <td>
-                  <code>vector</code>
+                  <code>array</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -918,7 +918,7 @@
           </tr>
           <tr class="doc-section-item">
 <td><code>t</code></td>            <td>
-                  <code>vector</code>
+                  <code>array</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -977,7 +977,7 @@
 <span class="sd">        &gt;&gt;&gt; x,t = RK4(f,0,0,10,20)</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        f (func): Ecuación a resolver.</span>
+<span class="sd">        f (func): Función que iguala dx/dt.</span>
 <span class="sd">        x0 (int): Valor inicial para la variable dependiente.</span>
 <span class="sd">        t0 (int): Valor inicial para la variable independiente.</span>
 <span class="sd">        tf (int): Valor final para la variable independiente.</span>
@@ -985,8 +985,8 @@
 
 
 <span class="sd">    returns:</span>
-<span class="sd">        x (vector): resultados de la variable dependiente.</span>
-<span class="sd">        t (vector): resultados de la variable independiente.</span>
+<span class="sd">        x (array): resultados de la variable dependiente.</span>
+<span class="sd">        t (array): resultados de la variable independiente.</span>
 
 <span class="sd">     &quot;&quot;&quot;</span>
     <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span><span class="n">tf</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
