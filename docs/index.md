@@ -21,13 +21,18 @@ $$
 \\ x(t+h) = x(t) + h\frac{dx}{dt} + \overbrace{ \frac{h^2}{2} \frac{d^2x}{dt^2} } ^{\epsilon} + O(h^3)
 $$
 
-h siendo un cambio lo suficientemente pequeño como para asegurar que para avanzar en el intervalo de variables independientes, se puede utilizar la ecuación: 
+
+Donde h es un número de cambio lo suficientemente pequeño como para estimar la solución de la EDO de la siguiente forma:
 
 $$
-\\ x(t + h) = x(t) + hf(x,t)
+\\ x(t + h) = x(t) + h\frac{dx}{dt} =  x(t) + hf(x,t)
 $$
 
-Cabe destacar que el valor de $ \\epsilon $ de la expansión de Taylor se relaciona al error. Este está relacionado de manera directa con la cantidad de subdivisiones que se hagan del intervalo de las variables independientes. El calculo de esta subdivisiones se relaciona a la expresión $$ \\ N = \frac{(b - a)}{h} $$ por lo que entre más subdivisiones, el error será más despreciable.
+Donde el error global escala linealmente con h:
+
+$$
+\\ \sum\epsilon = \frac{h}{2}\left[f_b - f_a\right]
+$$
 
 
 ## Método de Runge-Kutta de Segundo Orden (RK2)
